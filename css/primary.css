@@ -1,25 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  margin: 0px;
-  background-color: black;
-  font-family: Helvetica Neue, Helvetica;
-  color: white; }
-  body a {
+    margin: 0;
+    background-color: black;
+    font-family: Helvetica Neue, Helvetica, serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+body a {
     color: orange;
-    text-decoration: none; }
-    body a:hover {
-      color: yellow; }
-  body .content {
+    text-decoration: none;
+}
+
+body a:hover {
+    color: yellow;
+}
+
+body .content {
     background: url("../images/me.png") no-repeat bottom right;
-    height: 1398px;
-    width: 1600px;
+    width: 100%;
+    height: 100%;
     margin: 0 0 0 auto;
-    padding-left: 50px; }
-    body .content h1 {
-      font-weight: normal;
-      padding: 25px 0 0;
-      margin: 0px;
-      font-size: 130px; }
-    body .content p {
-      font-size: 17px;
-      margin: 5px 0 10px 10px;
-      padding: 0px; }
+    padding-left: 50px;
+}
+
+body .content h1 {
+    font-weight: normal;
+    padding: 25px 0 0;
+    margin: 0;
+    font-size: 130px;
+}
+
+body .content p {
+    font-size: 17px;
+    margin: 5px 0 10px 10px;
+    padding: 0;
+}
