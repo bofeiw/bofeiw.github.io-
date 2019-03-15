@@ -8,8 +8,6 @@ html, body {
     /* Apple style family */
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -18,11 +16,8 @@ html {
 }
 
 body {
-    margin: 0;
     background: url("../images/me.png") no-repeat bottom right;
     background-size: contain;
-    width: 100%;
-    height: 100%;
 }
 
 body a {
@@ -32,24 +27,23 @@ body a {
 
 body a:hover {
     color: yellow;
+    text-decoration: underline;
 }
 
 body .content {
-    width: 100%;
-    height: 100%;
-    margin: 0 0 0 auto;
+    box-sizing: border-box;
     padding-left: 3%;
 }
 
 body .content h1 {
     font-weight: normal;
     padding: .1em 0 0;
-    margin: 0;
+    margin: .2em 0 .5em 0;
     font-size: 11em;
 }
 
 body .content p {
     font-size: 1.5em;
     margin: .2em 0 .5em 1em;
-    padding: 0;
+    padding: .1em 0 0 0;
 }
