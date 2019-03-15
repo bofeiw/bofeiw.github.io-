@@ -26,7 +26,6 @@ body a {
 }
 
 body a:hover {
-    color: yellow;
     text-decoration: underline;
 }
 
