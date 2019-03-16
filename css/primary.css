@@ -185,6 +185,9 @@ a:hover {
     .content-text {
         font-size: 30px;
     }
+    .header-text::after {
+        content: "1";
+    }
 }
 
 @media (min-width: 980px) and (max-width: 1299px) {
@@ -193,6 +196,9 @@ a:hover {
     }
     .content-text {
         font-size: 30px;
+    }
+    .header-text::after {
+        content: "2";
     }
 }
 
@@ -203,6 +209,9 @@ a:hover {
     .content-text {
         font-size: 25px;
     }
+    .header-text::after {
+        content: "3";
+    }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -212,6 +221,9 @@ a:hover {
     .content-text {
         font-size: 22px;
     }
+    .header-text::after {
+        content: "4";
+    }
 }
 
 @media (max-width: 479px) {
@@ -220,5 +232,8 @@ a:hover {
     }
     .content-text {
         font-size: 20px;
+    }
+    .header-text::after {
+        content: "5";
     }
 }
