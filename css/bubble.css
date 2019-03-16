@@ -35,7 +35,7 @@
 }
 
 .bubble {
-    overflow: hidden;
+    overflow: auto;
     display: inline-block;
     margin: 0 0 .125rem 0;
     padding: .5rem .85rem;
