@@ -8,6 +8,9 @@ html, body {
     /* Apple style family */
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 }
 
 /* style from apple */
@@ -23,6 +26,8 @@ html {
 body {
     background: url("../images/me.png") no-repeat bottom right;
     background-size: contain;
+    min-height: 100%;
+    height: auto;
 }
 
 body a {
