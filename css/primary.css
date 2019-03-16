@@ -1,5 +1,5 @@
-
-.constants {
+/* constants */
+:root {
     --blue: #0080FF;
     --orange: #FF7F00;
 }
@@ -20,18 +20,25 @@ html, body {
 
 html {
     background-color: black;
-    color: #FF7F00;
+    color: var(--orange);
 }
 
 body {
+    /* bg image */
     background: url("../images/me.png") no-repeat bottom right;
+
+    /* image is just contained by body */
     background-size: contain;
+
+    /* to ensure image bottom is page bottom */
     min-height: 100%;
     height: auto;
+    animation-name: black-to-orange;
+    animation-duration: 800ms;
 }
 
 body a {
-    color: #0080FF;
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -56,3 +63,13 @@ body .content p {
     margin: .2em 0 .5em 1em;
     padding: .1em 0 0 0;
 }
+
+@keyframes black-to-orange {
+    from {
+        color: black;
+    }
+    to {
+        color: var(--orange);
+    }
+}
+
