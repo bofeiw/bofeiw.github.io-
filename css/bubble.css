@@ -1,11 +1,36 @@
 /* bubble messages */
 /* origin: https://github.com/juliangarnier/juliangarnier.com */
 /* Author: https://github.com/juliangarnier */
+:root {
+    font-size: 1.125rem;
+}
+
+@media (min-width: 600px) {
+    :root {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    :root {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 2rem;
+    }
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .messages {
     overflow: auto;
-    width: 100vw;
-    max-height: 100vh;
     padding: 1rem .9rem;
 }
 
@@ -36,7 +61,8 @@
     left: -.5rem;
     width: .5rem;
     height: .5rem;
-    background-image: url("../images/bubble/corner.svg");
+    /* this svg does not work as expected */
+    /*background-image: url("../images/bubble/corner.svg");*/
     background-size: .5rem .5rem;
     background-position: .5rem 0;
     background-repeat: no-repeat;
@@ -64,5 +90,5 @@
 
 .bubble .loading b {
     display: inline-block;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .7);
 }

@@ -95,14 +95,14 @@ a:hover {
 }
 
 .content-text-wrapper {
-    flex: content;
+    flex: 2;
 }
 
 .content-portrait {
     opacity: 0;
     animation: show-portrait var(--animation-show-duration) ease var(--animation-deley-portrait) forwards;
 
-    flex: auto;
+    flex: 1;
 
     box-sizing: border-box;
     padding-left: 3%;

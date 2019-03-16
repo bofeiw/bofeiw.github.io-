@@ -27,15 +27,14 @@ let talk = function () {
 
     var messages = [
         'Hi there 👋',
-        'I\'m Bofei Wang, you can call me Bofey',
-        'Computer Science student at <a href="https://en.wikipedia.org/wiki/University_of_New_South_Wales">UNSW Sydney</a>',
+        'I\'m a Computer Science student at <a href="https://en.wikipedia.org/wiki/University_of_New_South_Wales">UNSW Sydney</a>',
         'I love <a href="https://github.com/bofey">coding</a>, and am implementing <a href="https://github.com/bofey/Algorithms-in-C">algorithms</a> in C',
-        'I am a casual tutor of computer science courses',
+        'I appreciate good design of good UI and UX',
         'Code of this site is available at <a href="https://github.com/bofey/bofey.github.io">GitHub repo</a>',
-        'Actively looking for a job',
-        'You can contact me via <a href="mailto:boey.me@gmail.com">email</a> or <a href="tel:0451793688">phone</a>',
+        'I am a casual tutor of computer science courses',
+        'I\'m actively looking for a software related job, you can contact me via <a href="mailto:boey.me@gmail.com">email</a> or <a href="tel:0451793688">phone</a>',
         getCurrentTime(),
-        '👀 B.'
+        '👀 B.W'
     ]
 
     var getFontSize = function () {
