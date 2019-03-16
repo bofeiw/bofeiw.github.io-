@@ -29,18 +29,10 @@ html {
     color: var(--orange);
 }
 
-body {
-    box-sizing: border-box;
-    padding-left: 3%;
-    /* bg image */
-    background: url("../images/me.png") no-repeat bottom -12em right 3%;
-
-    /* image is just contained by body */
-    background-size: contain;
-
-    /* to ensure image bottom is page bottom */
-    min-height: 100%;
-    height: auto;
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
 
 a {
@@ -64,15 +56,24 @@ p {
     margin: .2em 0 .5em 1em;
     padding: .1em 0 0 0;
     text-align: left;
-    opacity: 0;
-    animation-name: show-text;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-delay: var(--animation-show-deley2);
-    animation-duration: var(--animation-show-duration);
+    /*opacity: 0;*/
+    /*animation-name: show-text;*/
+    /*animation-timing-function: ease;*/
+    /*animation-fill-mode: forwards;*/
+    /*animation-delay: var(--animation-show-deley2);*/
+    /*animation-duration: var(--animation-show-duration);*/
+}
+
+.section-header {
+    flex: content;
+}
+
+.section-content {
+    flex: auto;
 }
 
 .header {
+    flex: 1;
     opacity: 0;
     animation-name: black-to-orange;
     animation-timing-function: ease;
@@ -82,6 +83,41 @@ p {
 }
 
 .content {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: 100%;
+}
+
+.content-text {
+    flex: content;
+}
+
+.content-portrait {
+    flex: auto;
+
+    box-sizing: border-box;
+    padding-left: 3%;
+    /* bg image */
+    background: url("../images/me.png") no-repeat bottom 0 right 0;
+
+    /* image is just contained by body */
+    background-size: contain;
+
+    /* to ensure image bottom is page bottom */
+    min-height: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .content-portrait {
+        background-position: bottom;
+    }
 }
 
 @keyframes black-to-orange {
