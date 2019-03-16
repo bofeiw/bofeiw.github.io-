@@ -24,6 +24,36 @@ html {
 }
 
 body {
+    box-sizing: border-box;
+    padding-left: 3%;
+
+    animation-name: black-to-orange;
+    animation-duration: 800ms;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: normal;
+    padding: .1em 0 0;
+    margin: .2em 0 .5em 0;
+    font-size: 11em;
+}
+
+p {
+    font-size: 1.5em;
+    margin: .2em 0 .5em 1em;
+    padding: .1em 0 0 0;
+}
+
+.content {
     /* bg image */
     background: url("../images/me.png") no-repeat bottom right;
 
@@ -33,35 +63,6 @@ body {
     /* to ensure image bottom is page bottom */
     min-height: 100%;
     height: auto;
-    animation-name: black-to-orange;
-    animation-duration: 800ms;
-}
-
-body a {
-    color: var(--blue);
-    text-decoration: none;
-}
-
-body a:hover {
-    text-decoration: underline;
-}
-
-body .content {
-    box-sizing: border-box;
-    padding-left: 3%;
-}
-
-body .content h1 {
-    font-weight: normal;
-    padding: .1em 0 0;
-    margin: .2em 0 .5em 0;
-    font-size: 11em;
-}
-
-body .content p {
-    font-size: 1.5em;
-    margin: .2em 0 .5em 1em;
-    padding: .1em 0 0 0;
 }
 
 @keyframes black-to-orange {
