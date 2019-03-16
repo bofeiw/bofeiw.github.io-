@@ -26,7 +26,7 @@ html, body {
 
 /* style from apple */
 [lang]:lang(zh-CN) {
-    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 html {
@@ -57,17 +57,17 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
+.header-text {
     font-weight: normal;
-    padding: .1em 0 0;
-    margin: .1em 0 .5em 0;
-    font-size: 11em;
+    font-size: 100px;
+    margin: 2vh 0 3vh 0;
 }
 
-p {
-    font-size: 1.5em;
-    margin: .2em 0 .5em 1em;
-    padding: .1em 0 0 0;
+.content-text {
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 2vh;
+    padding-left: 2vw;
     text-align: left;
     opacity: 0;
     animation: show-text var(--animation-show-duration) ease var(--animation-deley-text) forwards;
@@ -94,7 +94,7 @@ p {
     width: 100%;
 }
 
-.content-text {
+.content-text-wrapper {
     flex: content;
 }
 
@@ -130,32 +130,23 @@ p {
 
 @keyframes show-text {
     from {
-        margin-left: -3em;
+        margin-left: -4vw;
         opacity: 0;
     }
     to {
-        margin-left: 1em;
+        margin-left: 0;
         opacity: 1;
     }
 }
 
 @keyframes show-portrait {
     from {
-        margin-right: -4em;
+        margin-right: -4vw;
         opacity: 0;
     }
     to {
         margin-right: 0;
         opacity: 1;
-    }
-}
-
-@keyframes open-white-to-black {
-    from {
-        background-color: white;
-    }
-    to {
-        background-color: black;
     }
 }
 
@@ -167,9 +158,62 @@ p {
     80% {
         transform: scale(1);
     }
-    /*80% {*/
-    /*}*/
     100% {
         border-radius: 0;
+    }
+}
+
+
+@media (min-width: 2000px) {
+    .header-text {
+        font-size: 20vmin;
+    }
+    .content-text {
+        font-size: 4vmin;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1999px) {
+    .header-text {
+        font-size: 180px;
+    }
+    .content-text {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1299px) {
+    .header-text {
+        font-size: 120px;
+    }
+    .content-text {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .header-text {
+        font-size: 100px;
+    }
+    .content-text {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .header-text {
+        font-size: 80px;
+    }
+    .content-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 479px) {
+    .header-text {
+        font-size: 60px;
+    }
+    .content-text {
+        font-size: 18px;
     }
 }
