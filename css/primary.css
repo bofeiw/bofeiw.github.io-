@@ -3,9 +3,12 @@
     --blue: #0080FF;
     --orange: #FF7F00;
 
-    --animation-show-deley1: 50ms;
-    --animation-show-deley2: 350ms;
+    --animation-show-deley-header: 50ms;
+    --animation-show-deley-text: 450ms;
+    --animation-show-deley-portrait: 450ms;
     --animation-show-duration: 800ms;
+
+    --page-horizontal-margin: 3%
 }
 
 html, body {
@@ -33,6 +36,7 @@ html {
     display: flex;
     flex-flow: column;
     height: 100%;
+    margin: 0 var(--page-horizontal-margin);
 }
 
 a {
@@ -56,12 +60,8 @@ p {
     margin: .2em 0 .5em 1em;
     padding: .1em 0 0 0;
     text-align: left;
-    /*opacity: 0;*/
-    /*animation-name: show-text;*/
-    /*animation-timing-function: ease;*/
-    /*animation-fill-mode: forwards;*/
-    /*animation-delay: var(--animation-show-deley2);*/
-    /*animation-duration: var(--animation-show-duration);*/
+    opacity: 0;
+    animation: show-text var(--animation-show-duration) ease var(--animation-show-deley-text) forwards;
 }
 
 .section-header {
@@ -75,11 +75,7 @@ p {
 .header {
     flex: 1;
     opacity: 0;
-    animation-name: black-to-orange;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-delay: var(--animation-show-deley1);
-    animation-duration: var(--animation-show-duration);
+    animation: black-to-orange var(--animation-show-duration) ease var(--animation-show-deley-text) forwards;
 }
 
 .content {
@@ -94,6 +90,9 @@ p {
 }
 
 .content-portrait {
+    opacity: 0;
+    animation: show-portrait var(--animation-show-duration) ease var(--animation-show-deley-portrait) forwards;
+
     flex: auto;
 
     box-sizing: border-box;
@@ -131,7 +130,7 @@ p {
 
 @keyframes show-text {
     from {
-        margin-left: -1em;
+        margin-left: -3em;
         opacity: 0;
     }
     to {
@@ -140,3 +139,13 @@ p {
     }
 }
 
+@keyframes show-portrait {
+    from {
+        margin-right: -4em;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
