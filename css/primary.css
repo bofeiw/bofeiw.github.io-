@@ -39,10 +39,6 @@ body {
     animation: open var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;
 }
 
-/*body:after {*/
-    /*animation: open-fix var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;*/
-/*}*/
-
 .wrapper {
     display: flex;
     flex-flow: column;
@@ -80,7 +76,7 @@ p {
 }
 
 .section-content {
-    flex: auto;
+    flex: 1;
 }
 
 .header {
@@ -164,7 +160,7 @@ p {
     }
 }
 
-@keyframes open {
+@keyframes openn {
     from {
         background-color: white;
     }
@@ -173,14 +169,21 @@ p {
     }
 }
 
-@keyframes openn {
+@keyframes open {
     0% {
         position: absolute;
-        width: 0;
-        border-radius: 50%;
+        width: 1px;
+        height: 1px;
+        left: 50%;
+        top: 50%;
+        border-radius: 0;
     }
-    20% {
-        width: 50%;
+    80% {
+        --radius: 100vmin;
+        left: 100% - var(--radius);
+        top: 100% - var(--radius);
+        width: var(--radius);
+        height: var(--radius);
         border-radius: 50%;
     }
     99% {
