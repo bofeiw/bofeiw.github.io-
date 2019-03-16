@@ -10,6 +10,11 @@ html, body {
     height: 100%;
 }
 
+/* style from apple */
+[lang]:lang(zh-CN) {
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
 html {
     background-color: black;
     color: #FF7F00;
