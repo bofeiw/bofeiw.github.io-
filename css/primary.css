@@ -21,7 +21,7 @@ html, body {
     padding: 0;
 
     /* eliminates sub elements exceed parent problem */
-    overflow: auto;
+    overflow: scroll;
 }
 
 /* style from apple */
