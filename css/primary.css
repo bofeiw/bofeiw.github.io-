@@ -44,7 +44,8 @@ body {
 .wrapper {
     display: flex;
     flex-flow: column;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     margin: 0 var(--page-horizontal-margin);
 }
 
@@ -79,6 +80,9 @@ a:hover {
 
 .section-content {
     flex: 1;
+
+    /* fix bug of 100% in flex */
+    position:relative;
 }
 
 .header {
@@ -90,8 +94,12 @@ a:hover {
 .content {
     display: flex;
     flex-flow: row;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     width: 100%;
+
+    /* fix bug of 100% in flex */
+    position:absolute;
 }
 
 .content-text-wrapper {
@@ -121,6 +129,7 @@ a:hover {
     .content {
         display: flex;
         flex-flow: column;
+        height: fit-content;
     }
 
     .content-portrait {
