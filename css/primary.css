@@ -3,9 +3,11 @@
     --blue: #0080FF;
     --orange: #FF7F00;
 
-    --animation-show-deley-header: 50ms;
-    --animation-show-deley-text: 450ms;
-    --animation-show-deley-portrait: 450ms;
+    --animation-deley-open: 0ms;
+    --animation-deley-header: 850ms;
+    --animation-deley-text: 1650ms;
+    --animation-deley-portrait: 1650ms;
+    --animation-open-duration: 750ms;
     --animation-show-duration: 800ms;
 
     --page-horizontal-margin: 3%
@@ -28,9 +30,18 @@ html, body {
 }
 
 html {
-    background-color: black;
+    background-color: white;
     color: var(--orange);
 }
+
+body {
+    background-color: black;
+    animation: open var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;
+}
+
+/*body:after {*/
+    /*animation: open-fix var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;*/
+/*}*/
 
 .wrapper {
     display: flex;
@@ -61,7 +72,7 @@ p {
     padding: .1em 0 0 0;
     text-align: left;
     opacity: 0;
-    animation: show-text var(--animation-show-duration) ease var(--animation-show-deley-text) forwards;
+    animation: show-text var(--animation-show-duration) ease var(--animation-deley-text) forwards;
 }
 
 .section-header {
@@ -75,7 +86,7 @@ p {
 .header {
     flex: 1;
     opacity: 0;
-    animation: black-to-orange var(--animation-show-duration) ease var(--animation-show-deley-text) forwards;
+    animation: show-header var(--animation-show-duration) ease var(--animation-deley-header) forwards;
 }
 
 .content {
@@ -91,7 +102,7 @@ p {
 
 .content-portrait {
     opacity: 0;
-    animation: show-portrait var(--animation-show-duration) ease var(--animation-show-deley-portrait) forwards;
+    animation: show-portrait var(--animation-show-duration) ease var(--animation-deley-portrait) forwards;
 
     flex: auto;
 
@@ -119,7 +130,10 @@ p {
     }
 }
 
-@keyframes black-to-orange {
+.open {
+}
+
+@keyframes show-header {
     from {
         opacity: 0;
     }
@@ -149,3 +163,50 @@ p {
         opacity: 1;
     }
 }
+
+@keyframes open {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes openn {
+    0% {
+        position: absolute;
+        width: 0;
+        border-radius: 50%;
+    }
+    20% {
+        width: 50%;
+        border-radius: 50%;
+    }
+    99% {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    100% {
+        position: static;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes open-fix {
+    0% {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    99% {
+        padding-bottom: 100%;
+    }
+    100% {
+        padding: 0;
+    }
+}
+
