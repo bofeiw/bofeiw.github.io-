@@ -2,6 +2,10 @@
 :root {
     --blue: #0080FF;
     --orange: #FF7F00;
+
+    --animation-show-deley1: 50ms;
+    --animation-show-deley2: 350ms;
+    --animation-show-duration: 800ms;
 }
 
 html, body {
@@ -10,12 +14,14 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+
+    /* eliminates sub elements exceed parent problem */
     overflow: auto;
 }
 
 /* style from apple */
 [lang]:lang(zh-CN) {
-    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 html {
@@ -26,9 +32,15 @@ html {
 body {
     box-sizing: border-box;
     padding-left: 3%;
+    /* bg image */
+    background: url("../images/me.png") no-repeat bottom -12em right 3%;
 
-    animation-name: black-to-orange;
-    animation-duration: 800ms;
+    /* image is just contained by body */
+    background-size: contain;
+
+    /* to ensure image bottom is page bottom */
+    min-height: 100%;
+    height: auto;
 }
 
 a {
@@ -43,7 +55,7 @@ a:hover {
 h1 {
     font-weight: normal;
     padding: .1em 0 0;
-    margin: .2em 0 .5em 0;
+    margin: .1em 0 .5em 0;
     font-size: 11em;
 }
 
@@ -51,26 +63,44 @@ p {
     font-size: 1.5em;
     margin: .2em 0 .5em 1em;
     padding: .1em 0 0 0;
+    text-align: left;
+    opacity: 0;
+    animation-name: show-text;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: var(--animation-show-deley2);
+    animation-duration: var(--animation-show-duration);
+}
+
+.header {
+    opacity: 0;
+    animation-name: black-to-orange;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: var(--animation-show-deley1);
+    animation-duration: var(--animation-show-duration);
 }
 
 .content {
-    /* bg image */
-    background: url("../images/me.png") no-repeat bottom right;
-
-    /* image is just contained by body */
-    background-size: contain;
-
-    /* to ensure image bottom is page bottom */
-    min-height: 100%;
-    height: auto;
 }
 
 @keyframes black-to-orange {
     from {
-        color: black;
+        opacity: 0;
     }
     to {
-        color: var(--orange);
+        opacity: 1;
+    }
+}
+
+@keyframes show-text {
+    from {
+        margin-left: -1em;
+        opacity: 0;
+    }
+    to {
+        margin-left: 1em;
+        opacity: 1;
     }
 }
 
