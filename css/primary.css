@@ -125,8 +125,12 @@ a:hover {
 
     .content-portrait {
         background-position: bottom;
+        width: 100%;
+        height: auto;
     }
 }
+
+/* opening animation */
 
 @keyframes show-text {
     from {
@@ -163,6 +167,7 @@ a:hover {
     }
 }
 
+/* responsive font size */
 
 @media (min-width: 2000px) {
     .header-text {
@@ -178,7 +183,7 @@ a:hover {
         font-size: 180px;
     }
     .content-text {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -214,6 +219,6 @@ a:hover {
         font-size: 60px;
     }
     .content-text {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
