@@ -75,7 +75,8 @@ a:hover {
 }
 
 .section-header {
-    flex: content;
+    /* keep the line below commented fix display bug for FireFox and Edge */
+    /*flex: content;*/
 }
 
 .section-content {
