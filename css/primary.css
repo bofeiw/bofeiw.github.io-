@@ -29,8 +29,9 @@ html {
     width: 100%;
     min-height: 100vh;
     height: auto;
-    background-color: white;
     color: var(--orange);
+    background-color: white;
+    animation: bg-white-to-black var(--animation-open-duration) linear var(--animation-deley-open) forwards;
 }
 
 body {
@@ -145,6 +146,21 @@ a:hover {
     to {
         margin-right: 0;
         opacity: 1;
+    }
+}
+
+@keyframes bg-white-to-black {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: grey;
+    }
+    90% {
+        background-color: dimgrey;
+    }
+    100% {
+        background-color: black;
     }
 }
 
