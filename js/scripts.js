@@ -9,7 +9,6 @@
  */
 
 let talk = function () {
-
     var messagesEl = document.querySelector('.messages');
     var typingSpeed = 20;
     var loadingText = '<b>•</b><b>•</b><b>•</b>';
@@ -20,12 +19,31 @@ let talk = function () {
         var hours = date.getHours();
         var minutes = date.getMinutes();
         var current = hours + (minutes * .01);
-        if (current >= 5 && current < 19) return 'Have a nice day';
-        if (current >= 19 && current < 22) return 'Have a nice evening';
-        if (current >= 22 || current < 5) return 'Have a good night';
+        if (current >= 5 && current < 19) {
+            switch (lang) {
+                case "zh":
+                    return '祝你今天愉快！';
+                default:
+                    return 'Have a nice day!';
+            }
+        } else if (current >= 19 && current < 22) {
+            switch (lang) {
+                case "zh":
+                    return '祝你下午开心！';
+                default:
+                    return 'Have a nice evening!';
+            }
+        } else if (current >= 22 || current < 5) {
+            switch (lang) {
+                case "zh":
+                    return '晚安！';
+                default:
+                    return 'Have a good night!';
+            }
+        }
     }
 
-    var messages = [
+    let messages = [
         'Hi there 👋',
         'I\'m a CS student at <a href="https://en.wikipedia.org/wiki/University_of_New_South_Wales">UNSW Sydney</a>',
         'I love <a href="https://github.com/bofey">coding</a>, and am implementing <a href="https://github.com/bofey/Algorithms-in-C">algorithms</a> in C',
@@ -35,7 +53,21 @@ let talk = function () {
         'I\'m actively looking for a software related job',
         'You can <a href="mailto:boey.me@gmail.com">email</a> me, or send me a <a href="sms:0451793688">message</a>, or directly <a href="tel:0451793688">call</a> me',
         getCurrentTime() + ' 👀 B.W'
-    ]
+    ];
+
+    if (lang === "zh") {
+        messages = [
+            '哈喽 👋',
+            '我是<a href="https://zh.wikipedia.org/zh-cn/新南威尔士大学">新南威尔士大学计算机科学的学生</a>',
+            '我爱<a href="https://github.com/bofey">编程</a>，现在正在用C写<a href="https://github.com/bofey/Algorithms-in-C">算法</a>',
+            '我很欣赏经过细心设计的UI和UX',
+            '这个网站的代码可以在<a href="https://github.com/bofey/bofey.github.io">GitHub仓库</a>里找到',
+            '我还是一个计算机课程的私教',
+            '我正在积极地找一份软件相关地工作',
+            '你可以给我发<a href="mailto:boey.me@gmail.com">邮件</a>，给我发<a href="sms:0451793688">信息</a>，或者直接给我打<a href="tel:0451793688">电话</a>',
+            getCurrentTime() + ' 👀 飞'
+        ];
+    }
 
     var getFontSize = function () {
         return parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
@@ -179,8 +211,8 @@ let talk = function () {
 
     sendMessages();
 
-}
+};
 
 window.onload = function () {
     setTimeout(talk, 2100);
-}
+};
