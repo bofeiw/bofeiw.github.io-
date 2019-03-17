@@ -30,7 +30,7 @@
 }
 
 .messages {
-    overflow: auto;
+    overflow: hidden;
     padding: 1rem .9rem;
 }
 
