@@ -9,11 +9,12 @@
  */
 
 let talk = function () {
+    // speed for english characters
+    let typingSpeed = 20;
+
     var messagesEl = document.querySelector('.messages');
-    var typingSpeed = 20;
     var loadingText = '<b>•</b><b>•</b><b>•</b>';
     var messageIndex = 0;
-    lang = "en";
 
     var getCurrentTime = function () {
         var date = new Date();
@@ -76,6 +77,7 @@ let talk = function () {
             getCurrentTime(),
             ' 👀 飞'
         ];
+        typingSpeed = 80;
     }
 
     var getFontSize = function () {
@@ -126,7 +128,7 @@ let talk = function () {
     }
 
     var sendMessage = function (message, position) {
-        var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + 500;
+        var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(300, 800);
         var elements = createBubbleElements(message, position);
         messagesEl.appendChild(elements.bubble);
         messagesEl.appendChild(document.createElement('br'));
@@ -215,7 +217,7 @@ let talk = function () {
         if (!message) return;
         sendMessage(message);
         ++messageIndex;
-        setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
+        setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1500));
     }
 
     sendMessages();
