@@ -8,10 +8,49 @@
  * Copyright (c) 2016 Julian Garnier
  */
 
+// check if element is completely inside viewport
+// return the relative state of the element compared to viewport
+// https://codepen.io/bfintal/pen/Ejvgrp, modified
+const elementViewState = el => {
+    const scroll = window.scrollY || window.pageYOffset
+    const boundsTop = el.getBoundingClientRect().top + scroll
+
+    const viewport = {
+        top: scroll,
+        bottom: scroll + window.innerHeight,
+    }
+
+    const bounds = {
+        top: boundsTop,
+        bottom: boundsTop + el.clientHeight,
+    }
+
+    if (bounds.top > viewport.top && bounds.bottom < viewport.bottom) {
+        return "inside";
+    } else if (bounds.top <= viewport.top) {
+        return "up";
+    } else {
+        return "down"
+    }
+}
+
+// scroll to element completely inside viewport
+function scrollToElement(element) {
+    const elementState = elementViewState(element);
+    if (elementState === "up") {
+        var scroll = new SmoothScroll();
+        scroll.animateScroll(element);
+    } else if (elementState === "down") {
+        element.scrollIntoView(false);
+        // element.scrollIntoView({alignToTop: false, behavior: 'smooth', block: 'start', inline: "nearest" });
+    }
+}
+
 let talk = function () {
     // speed for english characters
     let typingSpeed = 20;
 
+    var elementUniqueID = 0;
     var messagesEl = document.querySelector('.messages');
     var loadingText = '<b>•</b><b>•</b><b>•</b>';
     var messageIndex = 0;
@@ -89,9 +128,11 @@ let talk = function () {
     }
 
     var createBubbleElements = function (message, position) {
+        const elementIDString = "message-ID-" + elementUniqueID;
         var bubbleEl = document.createElement('div');
         var messageEl = document.createElement('span');
         var loadingEl = document.createElement('span');
+        bubbleEl.id = elementIDString;
         bubbleEl.classList.add('bubble');
         bubbleEl.classList.add('is-loading');
         bubbleEl.classList.add('cornered');
@@ -103,6 +144,7 @@ let talk = function () {
         bubbleEl.appendChild(loadingEl);
         bubbleEl.appendChild(messageEl);
         bubbleEl.style.opacity = 0;
+        ++elementUniqueID;
         return {
             bubble: bubbleEl,
             message: messageEl,
@@ -138,6 +180,7 @@ let talk = function () {
         elements.message.style.width = dimensions.message.w;
         elements.message.style.height = dimensions.message.h;
         elements.bubble.style.opacity = 1;
+        scrollToElement(elements.bubble);
         var bubbleOffset = elements.bubble.offsetTop + elements.bubble.offsetHeight;
         if (bubbleOffset > messagesEl.offsetHeight) {
             var scrollMessages = anime({
