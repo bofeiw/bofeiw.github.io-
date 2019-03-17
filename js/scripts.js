@@ -110,7 +110,7 @@ let talk = function () {
             '我很欣赏经过细心设计的UI和UX',
             '这个网站的代码可以在这个<a href="https://github.com/bofey/bofey.github.io">GitHub仓库</a>里看到',
             '我还是一个计算机课程的私教',
-            '我正在积极地找一份软件相关地工作',
+            '我正在积极地找一份软件相关的工作',
             '你可以给我<a href="mailto:boey.me@gmail.com">发邮件</a>，给我<a href="sms:0451793688">发短信</a>',
             '或者直接给我<a href="tel:0451793688">打电话</a>',
             getCurrentTime(),
