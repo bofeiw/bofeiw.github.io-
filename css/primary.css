@@ -5,8 +5,8 @@
 
     --animation-deley-open: 50ms;
     --animation-deley-header: 1050ms;
-    --animation-deley-text: 1450ms;
-    --animation-deley-portrait: 1450ms;
+    --animation-deley-text: 1250ms;
+    --animation-deley-portrait: 1250ms;
     --animation-open-duration: 1000ms;
     --animation-show-duration: 800ms;
 
@@ -149,6 +149,9 @@ a:hover {
     0% {
         transform: scale(0);
         border-radius: 50%;
+    }
+    10% {
+        transform: scale(.01);
     }
     80% {
         transform: scale(1);
