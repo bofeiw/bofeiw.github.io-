@@ -6,6 +6,5 @@ My personal website
 - Ian Enders at [GitHub](https://github.com/ienders), whose [website](https://github.com/ienders/ianenders) inspired me.
 
 # TODO
-- add multi-language
 - resolve svg issue at bubble.css
 - clean up codes of bubble
