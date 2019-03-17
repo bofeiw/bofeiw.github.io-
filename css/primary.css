@@ -63,6 +63,7 @@ a:hover {
     margin: 2vh 0 3vh 0;
 }
 
+/* not being used */
 .content-text {
     font-weight: normal;
     font-size: 30px;
@@ -90,6 +91,8 @@ a:hover {
 
 .content-text-wrapper {
     flex: 2;
+    opacity: 0;
+    animation: show-text var(--animation-show-duration) ease var(--animation-deley-portrait) forwards;
 }
 
 .content-portrait {

@@ -182,5 +182,5 @@ let talk = function () {
 }
 
 window.onload = function () {
-    setTimeout(talk, 2000);
+    setTimeout(talk, 2100);
 }
