@@ -13,27 +13,28 @@ let talk = function () {
     var typingSpeed = 20;
     var loadingText = '<b>•</b><b>•</b><b>•</b>';
     var messageIndex = 0;
+    lang = "en";
 
     var getCurrentTime = function () {
         var date = new Date();
         var hours = date.getHours();
         var minutes = date.getMinutes();
         var current = hours + (minutes * .01);
-        if (current >= 5 && current < 19) {
+        if (current >= 5 && current < 13) {
             switch (lang) {
                 case "zh":
                     return '祝你今天愉快！';
                 default:
                     return 'Have a nice day!';
             }
-        } else if (current >= 19 && current < 22) {
+        } else if (current >= 13 && current < 21) {
             switch (lang) {
                 case "zh":
                     return '祝你下午开心！';
                 default:
                     return 'Have a nice evening!';
             }
-        } else if (current >= 22 || current < 5) {
+        } else if (current >= 21 || current < 5) {
             switch (lang) {
                 case "zh":
                     return '晚安！';
@@ -46,26 +47,34 @@ let talk = function () {
     let messages = [
         'Hi there 👋',
         'I\'m a CS student at <a href="https://en.wikipedia.org/wiki/University_of_New_South_Wales">UNSW Sydney</a>',
+        'My first year of uni was at <a href="https://en.wikipedia.org/wiki/University_of_Melbourne">Melbourne University</a>',
+        'But I like UNSW Sydney more, so transferred',
         'I love <a href="https://github.com/bofey">coding</a>, and am implementing <a href="https://github.com/bofey/Algorithms-in-C">algorithms</a> in C',
         'I appreciate design of good UI and good UX',
         'Code of this site is available at <a href="https://github.com/bofey/bofey.github.io">GitHub repo</a>',
-        'I am a casual tutor of computer science courses',
+        'I\'m also a casual tutor of computer science courses',
         'I\'m actively looking for a software related job',
-        'You can <a href="mailto:boey.me@gmail.com">email</a> me, or send me a <a href="sms:0451793688">message</a>, or directly <a href="tel:0451793688">call</a> me',
-        getCurrentTime() + ' 👀 B.W'
+        'You can <a href="mailto:boey.me@gmail.com">email</a> me, or send me a <a href="sms:0451793688">message</a>',
+        'or directly <a href="tel:0451793688">call</a> me',
+        getCurrentTime(),
+        ' 👀 B.W'
     ];
 
     if (lang === "zh") {
         messages = [
             '哈喽 👋',
-            '我是<a href="https://zh.wikipedia.org/zh-cn/新南威尔士大学">新南威尔士大学计算机科学的学生</a>',
+            '我是<a href="https://zh.wikipedia.org/zh-cn/新南威尔士大学">新南威尔士大学</a>计算机科学的学生',
+            '我在<a href="https://zh.wikipedia.org/wiki/墨尔本大学">墨尔本大学</a>读了大一',
+            '因为更喜欢新南威尔士大学，所以转了过来',
             '我爱<a href="https://github.com/bofey">编程</a>，现在正在用C写<a href="https://github.com/bofey/Algorithms-in-C">算法</a>',
             '我很欣赏经过细心设计的UI和UX',
-            '这个网站的代码可以在<a href="https://github.com/bofey/bofey.github.io">GitHub仓库</a>里找到',
+            '这个网站的代码可以在这个<a href="https://github.com/bofey/bofey.github.io">GitHub仓库</a>里看到',
             '我还是一个计算机课程的私教',
             '我正在积极地找一份软件相关地工作',
-            '你可以给我发<a href="mailto:boey.me@gmail.com">邮件</a>，给我发<a href="sms:0451793688">信息</a>，或者直接给我打<a href="tel:0451793688">电话</a>',
-            getCurrentTime() + ' 👀 飞'
+            '你可以给我<a href="mailto:boey.me@gmail.com">发邮件</a>，给我<a href="sms:0451793688">发短信</a>',
+            '或者直接给我<a href="tel:0451793688">打电话</a>',
+            getCurrentTime(),
+            ' 👀 飞'
         ];
     }
 
