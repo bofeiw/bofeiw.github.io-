@@ -16,12 +16,12 @@
 html, body {
     /* Apple style family */
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0;
     padding: 0;
 
     /* eliminates sub elements exceed parent problem */
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 
 /* style from apple */
@@ -31,7 +31,7 @@ html, body {
 
 html {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     background-color: white;
     color: var(--orange);
 }
@@ -44,8 +44,8 @@ body {
 .wrapper {
     display: flex;
     flex-flow: column;
-    min-height: 100%;
-    height: auto;
+    /*min-height: 100%;*/
+    /*height: auto;*/
     margin: 0 var(--page-horizontal-margin);
 }
 
@@ -77,13 +77,14 @@ a:hover {
 .section-header {
     /* keep the line below commented fix display bug for FireFox and Edge */
     /*flex: content;*/
+    flex: 1;
 }
 
 .section-content {
     flex: 1;
 
     /* fix bug of 100% in flex */
-    position:relative;
+    /*position:relative;*/
 }
 
 .header {
@@ -100,7 +101,7 @@ a:hover {
     width: 100%;
 
     /* fix bug of 100% in flex */
-    position:absolute;
+    /*position:absolute;*/
 }
 
 .content-text-wrapper {
@@ -136,7 +137,8 @@ a:hover {
     .content-portrait {
         background-position: bottom;
         width: 100%;
-        height: auto;
+        /*height: auto;*/
+        flex: 1;
     }
 }
 
