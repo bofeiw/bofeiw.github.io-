@@ -27,7 +27,7 @@ html, body {
 
 html {
     width: 100%;
-    min-height: 100vh;
+    min-height: 101vh;
     height: auto;
     color: var(--orange);
     background-color: white;
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 101vh;
     height: auto;
     background-color: black;
     animation: open var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;
@@ -44,7 +44,7 @@ body {
 .wrapper {
     display: flex;
     flex-flow: column;
-    min-height: 100vh;
+    min-height: 101vh;
     height: auto;
     margin: 0 var(--page-horizontal-margin);
 }
