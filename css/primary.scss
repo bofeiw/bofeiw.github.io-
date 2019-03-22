@@ -2,13 +2,15 @@
 :root {
   --blue: #0080FF;
   --orange: #FF7F00;
+
   --animation-deley-open: 50ms;
   --animation-deley-header: 1050ms;
   --animation-deley-text: 1250ms;
   --animation-deley-portrait: 1250ms;
   --animation-open-duration: 1000ms;
   --animation-show-duration: 800ms;
-  --page-horizontal-margin: 3% ;
+
+  --page-horizontal-margin: 3%
 }
 
 html, body {
@@ -73,6 +75,9 @@ a:hover {
   animation: show-text var(--animation-show-duration) ease var(--animation-deley-text) forwards;
 }
 
+.section-header {
+}
+
 .section-content {
   flex: auto;
   display: flex;
@@ -94,11 +99,14 @@ a:hover {
 .content-portrait {
   opacity: 0;
   animation: show-portrait var(--animation-show-duration) ease var(--animation-deley-portrait) forwards;
+
   flex: 1;
+
   box-sizing: border-box;
   padding-left: 3%;
   /* bg image */
   background: url("../images/me.png") no-repeat bottom 0 right 0;
+
   /* image is just contained by body */
   background-size: contain;
 }
@@ -116,7 +124,9 @@ a:hover {
     flex: 1;
   }
 }
+
 /* opening animation */
+
 @keyframes show-text {
   from {
     margin-left: -4vw;
@@ -127,6 +137,7 @@ a:hover {
     opacity: 1;
   }
 }
+
 @keyframes show-portrait {
   from {
     margin-right: -4vw;
@@ -137,6 +148,7 @@ a:hover {
     opacity: 1;
   }
 }
+
 @keyframes bg-white-to-black {
   0% {
     background-color: white;
@@ -151,13 +163,14 @@ a:hover {
     background-color: black;
   }
 }
+
 @keyframes open {
   0% {
     transform: scale(0);
     border-radius: 50%;
   }
   10% {
-    transform: scale(0.01);
+    transform: scale(.01);
   }
   80% {
     transform: scale(1);
@@ -166,61 +179,63 @@ a:hover {
     border-radius: 0;
   }
 }
+
 /* responsive font size */
+
 @media (min-width: 2000px) {
   .header-text {
     font-size: 20vmin;
   }
-
   .content-text {
     font-size: 4vmin;
   }
 }
+
 @media (min-width: 1300px) and (max-width: 1999px) {
   .header-text {
     font-size: 180px;
   }
-
   .content-text {
     font-size: 30px;
   }
 }
+
 @media (min-width: 980px) and (max-width: 1299px) {
   .header-text {
     font-size: 120px;
   }
-
   .content-text {
     font-size: 30px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 979px) {
   .header-text {
     font-size: 100px;
   }
-
   .content-text {
     font-size: 25px;
   }
 }
+
 @media (min-width: 480px) and (max-width: 767px) {
   .header-text {
     font-size: 80px;
   }
-
   .content-text {
     font-size: 22px;
   }
 }
+
 @media (max-width: 479px) {
   .header-text {
     font-size: 60px;
   }
-
   .content-text {
     font-size: 20px;
   }
 }
+
 :root {
   font-size: 1.125rem;
 }
@@ -230,15 +245,16 @@ a:hover {
     font-size: 1.5rem;
   }
 }
+
 @media (min-width: 900px) {
   :root {
     font-size: 1.75rem;
   }
 }
+
 @media (min-width: 1200px) {
   :root {
     font-size: 2rem;
   }
 }
 
-/*# sourceMappingURL=primary.css.map */
