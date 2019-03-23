@@ -3,12 +3,9 @@
   --blue: #0080FF;
   --orange: #FF7F00;
 
-  --animation-deley-open: 50ms;
-  --animation-deley-header: 1050ms;
-  --animation-deley-text: 1250ms;
-  --animation-deley-portrait: 1250ms;
-  --animation-open-duration: 1000ms;
-  --animation-show-duration: 800ms;
+  --animation-deley-header: 100ms;
+  --animation-deley-portrait: 100ms;
+  --animation-show-duration: 900ms;
 
   --page-horizontal-margin: 3%
 }
@@ -30,15 +27,12 @@ html {
   min-height: 101vh;
   height: auto;
   color: var(--orange);
-  background-color: white;
-  animation: bg-white-to-black var(--animation-open-duration) linear var(--animation-deley-open) forwards;
+  background-color: black;
 }
 
 body {
   min-height: 101vh;
   height: auto;
-  background-color: black;
-  animation: open var(--animation-open-duration) ease-in-out var(--animation-deley-open) forwards;
 }
 
 .wrapper {
@@ -71,8 +65,6 @@ a:hover {
   margin-top: 2vh;
   padding-left: 2vw;
   text-align: left;
-  opacity: 0;
-  animation: show-text var(--animation-show-duration) ease var(--animation-deley-text) forwards;
 }
 
 .section-header {
@@ -146,37 +138,6 @@ a:hover {
   to {
     margin-right: 0;
     opacity: 1;
-  }
-}
-
-@keyframes bg-white-to-black {
-  0% {
-    background-color: white;
-  }
-  50% {
-    background-color: grey;
-  }
-  90% {
-    background-color: dimgrey;
-  }
-  100% {
-    background-color: black;
-  }
-}
-
-@keyframes open {
-  0% {
-    transform: scale(0);
-    border-radius: 50%;
-  }
-  10% {
-    transform: scale(.01);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    border-radius: 0;
   }
 }
 
