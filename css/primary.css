@@ -2,6 +2,7 @@
 :root {
   --blue: #0080FF;
   --orange: #FF7F00;
+  --bg: #000;
   --animation-deley-header: 100ms;
   --animation-deley-portrait: 100ms;
   --animation-show-duration: 900ms;
@@ -25,7 +26,7 @@ html {
   min-height: 101vh;
   height: auto;
   color: var(--orange);
-  background-color: black;
+  background-color: var(--bg);
 }
 
 body {
