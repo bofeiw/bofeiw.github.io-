@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'/>
-    <meta name="keywords" content="HTML, GitHub Page, CSS, animation, personal website, Bofei, Bofei Wang, Wang bofei, 王博飞">
+    <meta name="keywords"
+          content="HTML, GitHub Page, CSS, animation, personal website, Bofei, Bofei Wang, Wang bofei, 王博飞">
     <meta name="description" content="Bofei Wang's website">
     <meta name="author" content="Bofei Wang">
     <meta name="robots" content="all">
@@ -16,6 +17,8 @@
 </head>
 <body>
 <div class="wrapper">
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
     <div class="section-header">
         <div class="header">
             <div class="header-text" id="name-header">Bofei Wang</div>
@@ -37,11 +40,17 @@
 <script src="js/smooth-scroll.polyfills.min.js" charset='utf-8'></script>
 <script src="js/anime.js" charset='utf-8'></script>
 <script src="js/scripts.js" charset='utf-8'></script>
+<script src="js/particles.min.js"></script>
+<script>particlesJS.load('particles-js', 'particles.json');</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136381371-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'UA-136381371-1');
 </script>

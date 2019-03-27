@@ -45,6 +45,15 @@ body {
   margin: 0 var(--page-horizontal-margin);
 }
 
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
 a {
   color: var(--blue);
   text-decoration: none;
