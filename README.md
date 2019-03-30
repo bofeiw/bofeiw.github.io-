@@ -1,5 +1,5 @@
 # bofeiw.github.io
-<a href="https://996.icu"><img src="https://img.shields.io/badge/support-996.icu-red.svg"></a>
+<a href="https://996.icu"><img src="https://img.shields.io/badge/support-996.icu-red.svg"></a><br>
 My personal website
 
 # Credit
