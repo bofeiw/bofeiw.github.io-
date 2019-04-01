@@ -266,5 +266,5 @@ let talk = function () {
 };
 
 window.onload = function () {
-    setTimeout(talk, 2100);
+    setTimeout(talk, 1100);
 };
