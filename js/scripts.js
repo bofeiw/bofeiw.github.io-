@@ -87,15 +87,14 @@ let talk = function () {
     let messages = [
         'Hi there 👋',
         'I\'m a CS student at <a href="https://en.wikipedia.org/wiki/University_of_New_South_Wales">UNSW Sydney</a>',
-        'My first year of uni was at <a href="https://en.wikipedia.org/wiki/University_of_Melbourne">Melbourne University</a>',
-        'But I like UNSW Sydney more, so transferred',
+        'And I\'m a <a href="https://996.icu/">996.ICU</a> supporter',
         'I love <a href="https://github.com/bofey">coding</a>, and am implementing <a href="https://github.com/bofey/Algorithms-in-C">algorithms</a> in C',
         'I appreciate design of good UI and good UX',
-        'Code of this site is available at <a href="https://github.com/bofey/bofey.github.io">GitHub repo</a>',
+        'I love <a href="https://github.com/bofeiw">open source</a>',
+        'This website is also <a href="https://github.com/bofeiw/bofeiw.github.io">open sourced</a>',
         'I\'m also a casual tutor of computer science courses',
         'I\'m actively looking for a software related job',
-        'You can <a href="mailto:boey.me@gmail.com">email</a> me, or send me a <a href="sms:0451793688">message</a>',
-        'or directly <a href="tel:0451793688">call</a> me',
+        'You can <a href="mailto:contact@bofei.io">email</a> me if you are interested',
         getCurrentTime(),
         ' 👀 B.W'
     ];
@@ -104,15 +103,14 @@ let talk = function () {
         messages = [
             '哈喽 👋',
             '我是<a href="https://zh.wikipedia.org/zh-cn/新南威尔士大学">新南威尔士大学</a>计算机科学的学生',
-            '我在<a href="https://zh.wikipedia.org/wiki/墨尔本大学">墨尔本大学</a>读了大一',
-            '因为更喜欢新南威尔士大学，所以转了过来',
+            '我是<a href="https://996.icu/">996.ICU</a>的支持者',
             '我爱<a href="https://github.com/bofey">编程</a>，现在正在用C写<a href="https://github.com/bofey/Algorithms-in-C">算法</a>',
             '我很欣赏经过细心设计的UI和UX',
-            '这个网站的代码可以在这个<a href="https://github.com/bofey/bofey.github.io">GitHub仓库</a>里看到',
+            '我喜欢<a href="https://github.com/bofeiw">开源</a>',
+            '这个网站也<a href="https://github.com/bofeiw/bofeiw.github.io">是开源的</a>',
             '我还是一个计算机课程的私教',
             '我正在积极地找一份软件相关的工作',
-            '你可以给我<a href="mailto:boey.me@gmail.com">发邮件</a>，给我<a href="sms:0451793688">发短信</a>',
-            '或者直接给我<a href="tel:0451793688">打电话</a>',
+            '如果你有兴趣，可以给我<a href="mailto:contact@bofei.io">发邮件</a>',
             getCurrentTime(),
             ' 👀 飞'
         ];
