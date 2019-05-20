@@ -1,0 +1,97 @@
+:root {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 2rem;
+  }
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#interactive-message {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  background-color: lightgrey;
+}
+
+#message-container {
+  padding: 1rem;
+  flex: 50;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: flex 1000ms ease;
+}
+
+#option-container {
+  background-color: lightgrey;
+  flex: 50;
+  transition: flex 1000ms linear;
+}
+
+.content-container {
+  padding: 0.5rem 0.85rem;
+  line-height: 1rem;
+  background: white;
+  border-radius: 1rem;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.message-wrapper {
+  margin-bottom: 0.25rem;
+}
+
+.content-loading {
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.content-container span {
+  display: block;
+}
+
+.content-container span b {
+  display: inline-block;
+  color: rgba(0, 0, 0, .5);
+}
+
+.content-loading {
+  position: absolute;
+}
+
+.content-text {
+}
+
+.content-mine {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}

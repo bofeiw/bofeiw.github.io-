@@ -1,0 +1,46 @@
+{
+  "messages": [
+    {
+      "content": "Hello there!",
+      "option": {
+        "content": "Hello! What's your name?",
+        "reply": {
+          "content": "I am Interactive Message!"
+        }
+      }
+    },
+    {
+      "content": "Here are some usage of messages"
+    },
+    {
+      "content": "Welcome to this demo!",
+      "option": {
+        "content": "What is this demo about?",
+        "reply": {
+          "content": "This demo shows some of the features of Interactive Message.",
+          "option": {
+            "content": "What are the features?",
+            "reply": {
+              "content": "It will come soon!"
+            }
+          }
+        }
+      }
+    },
+    {
+      "content": "Hope you'll love it.",
+      "option": {
+        "content": "Can I use it?",
+        "reply": {
+          "content": "Sure! It is open sourced, try it out <a href='https://github.com/bofeiw/InteractiveMessage'>here</a>",
+          "option": {
+            "content": "Thanks!",
+            "reply": {
+              "content": "No worries. Please help your self."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

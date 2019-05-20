@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+}
+
+#center-wrapper {
+    height: 100%;
+}
+
+#interactive-message {
+    max-width: 20rem;
+    margin: 0 auto;
+}

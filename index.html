@@ -11,9 +11,11 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="cache-control" content="no-cache">
     <title>Bofei Wang</title>
-    <link rel="stylesheet" href="css/primary.css">
-    <link rel="stylesheet" href="css/bubble.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="css/adjustSize.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/primary.css">
 </head>
 <body>
 <!-- particles.js container -->
@@ -26,7 +28,7 @@
     </div>
     <div class="section-content">
         <div class="content-text-wrapper">
-            <div class="messages"></div>
+            <div id="interactive-message"></div>
         </div>
         <div class="content-portrait">
             <!-- this img is a placeholder only, real showing image is in css background image -->
@@ -36,12 +38,20 @@
     </div>
 </div>
 </body>
-<script src="js/language.js" charset='utf-8'></script>
-<script src="js/smooth-scroll.polyfills.min.js" charset='utf-8'></script>
-<script src="js/anime.js" charset='utf-8'></script>
-<script src="js/scripts.js" charset='utf-8'></script>
+<script src="js/anime.min.js"></script>
+<script src="js/adjustSize.js"></script>
+<script src="js/circleCollision.js"></script>
+<script src="js/message.js"></script>
+
+<!-- start interactive message -->
+<script>
+    interactiveMessageStart("data/messages.json");
+</script>
+
+<!-- this is deferred because it is unimportant -->
 <script src="js/particles.min.js"></script>
-<script>particlesJS.load('particles-js', 'particles.json');</script>
+<script defer>particlesJS.load('particles-js', 'data/particles.json');</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136381371-1"></script>
 <script>
