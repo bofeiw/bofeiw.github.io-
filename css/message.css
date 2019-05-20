@@ -70,11 +70,11 @@ html, body {
   line-height: 1rem;
 }
 
-.content-container span {
+.content-container > span {
   display: block;
 }
 
-.content-container span b {
+.content-container > span b {
   display: inline-block;
   color: rgba(0, 0, 0, .5);
 }
@@ -84,6 +84,8 @@ html, body {
 }
 
 .content-text {
+  line-height: 1.2;
+  line-break: auto;
 }
 
 .content-mine {

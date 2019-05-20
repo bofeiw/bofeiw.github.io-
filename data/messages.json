@@ -1,44 +1,62 @@
 {
   "messages": [
     {
-      "content": "Hello there!",
+      "content": "Hello there!"
+    },
+    {
+      "content": "Welcome to visit me!",
       "option": {
-        "content": "Hello! What's your name?",
+        "content": "Who are you?",
         "reply": {
-          "content": "I am Interactive Message!"
+          "content": "Bofei Wang, Warrior of codes, Killer of bugs, Chaser of infinity, Spurner of the status quo, Supporter of <a href='https://996.icu/'>996ICU</a>, noble bachelor, Lover of animals, Enthusiast of Apple, Fan of Freedom Call and Creator of <a href='https://github.com/bofeiw/InteractiveMessage'>Interactive Message</a>"
         }
       }
     },
     {
-      "content": "Here are some usage of messages"
-    },
-    {
-      "content": "Welcome to this demo!",
+      "content": "I'm a CS student at <a href='https://en.wikipedia.org/wiki/University_of_New_South_Wales'>UNSW Sydney</a>",
       "option": {
-        "content": "What is this demo about?",
+        "content": "What courses did you do in uni?",
         "reply": {
-          "content": "This demo shows some of the features of Interactive Message.",
-          "option": {
-            "content": "What are the features?",
-            "reply": {
-              "content": "It will come soon!"
-            }
-          }
+          "content": "So far, Algorithms, Object Oriented Design, Database, Software Engineering, in uni. Outside of uni, I also learnt how to create web applications and iOS APPs on my own."
         }
       }
     },
     {
-      "content": "Hope you'll love it.",
+      "content": "I love coding and <a href='https://github.com/bofeiw'>open source</a>, this website is also <a href='https://github.com/bofeiw/bofeiw.github.io'>open sourced</a>",
       "option": {
-        "content": "Can I use it?",
+        "content": "What languages are in your skill set?",
         "reply": {
-          "content": "Sure! It is open sourced, try it out <a href='https://github.com/bofeiw/InteractiveMessage'>here</a>",
-          "option": {
-            "content": "Thanks!",
-            "reply": {
-              "content": "No worries. Please help your self."
-            }
-          }
+          "content": "Swift, JavaScript, Python, Java, C, C++, Haskell, <a href='https://github.com/hirasho/Sunaba'>Sunaba</a>, by preference"
+        }
+      }
+    },
+    {
+      "content": "I appreciate designs with careful heart, especially of UI"
+    },
+    {
+      "content": "I'm also a casual tutor of computer science courses",
+      "option": {
+        "content": "Can you talk more about tutoring?",
+        "reply": {
+          "content": "I am currently a casual tutor at <a href='http://dueape.com'>DuaApe</a> which provides online tutroing, and <a href='http://yingcredible.com/Index/AboutUs'>Yingcredible</a> which focuses on one-to-one tutoring in person. I teach computer science courses in both companies"
+        }
+      }
+    },
+    {
+      "content": "I'm actively looking for a software related job"
+    },
+    {
+      "content": "You can <a href='mailto:contact@bofei.io'>email</a> me at <span style='color:#ffbf00;'>contact@bofei.io</span> if you are interested"
+    },
+    {
+      "content": "Thanks for visiting"
+    },
+    {
+      "content": "\uD83D\uDC40 B.W",
+      "option": {
+        "content": "What's your contact information again?",
+        "reply": {
+          "content": "<span style='color:#ffbf00;'>contact@bofei.io</span>"
         }
       }
     }
