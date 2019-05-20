@@ -5,9 +5,9 @@ Lightweight, dark theme, interactive personal website
 [![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 ## Credit
-- Julian Garnier at [GitHub](https://github.com/juliangarnier), the js anime is very useful! Repo is at [here](https://github.com/juliangarnier/juliangarnier.com).
-- Ian Enders at [GitHub](https://github.com/ienders), whose [website](https://github.com/ienders/ianenders) inspired me.
+- [InteractiveMessage](https://github.com/bofeiw/InteractiveMessage) for JS message
+- [Anime.js](https://animejs.com) for JS animation
+- [Julian Garnier](https://github.com/juliangarnier/juliangarnier.com) for code borrowing
+- [Ian Enders](https://github.com/ienders/ianenders) for inspiration
 
 ## TODO
-- resolve svg issue at bubble.css
-- clean up codes of bubble
