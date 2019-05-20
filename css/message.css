@@ -36,7 +36,6 @@ html, body {
   flex-direction: column;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow: hidden;
-  background-color: lightgrey;
 }
 
 #message-container {
@@ -48,7 +47,6 @@ html, body {
 }
 
 #option-container {
-  background-color: lightgrey;
   flex: 50;
   transition: flex 1000ms linear;
 }
@@ -56,7 +54,7 @@ html, body {
 .content-container {
   padding: 0.5rem 0.85rem;
   line-height: 1rem;
-  background: white;
+  background: #36393E;
   border-radius: 1rem;
   display: inline-block;
   overflow: hidden;
