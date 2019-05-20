@@ -112,16 +112,8 @@ html, body {
 }
 
 @media only screen and (max-width: 768px) {
-  .section-content {
-    display: flex;
-    flex-flow: column;
-    height: fit-content;
-  }
-
   .content-portrait {
-    background-position: bottom;
-    width: 100%;
-    flex: 1;
+    display: none;
   }
 }
 
