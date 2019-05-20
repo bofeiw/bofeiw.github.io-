@@ -93,3 +93,7 @@ html, body {
 .clear {
   clear: both;
 }
+
+.circle {
+  background-color: #36393E;
+}
