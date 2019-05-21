@@ -11,3 +11,7 @@ Lightweight, dark theme, interactive personal website
 - [Ian Enders](https://github.com/ienders/ianenders) for inspiration
 
 ## TODO
+- resolve sometimes two circles are not shown fully
+- distinguish between received messages and sent messages from long messages (like imessage)
+- improve wordings
+- send (thanks/contact info again) after all is sent
