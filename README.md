@@ -28,6 +28,7 @@ This is created because I want my star list to be short.
 | https://github.com/luosijie/vue-resume | https://luosijie.github.io/vue-resume/#/ | Editable, looks nice, based on vue |
 | https://github.com/reefab/ResumeMan | https://reefab.net/ResumeMan/ | Fit with printer, company names is emphasised |
 | https://github.com/rickyyangrui/yangrui_resume | | Editable through browser |
+| https://github.com/xiandew/xiandew.github.io | https://xiandew.github.io/resume/ | Fit with print |
     
     
 ## Personal Website Collection 
